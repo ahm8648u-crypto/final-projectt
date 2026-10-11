@@ -130,7 +130,7 @@ export default function Nav() {
 
            {user ?
           ( <div className="flex items-center gap-0 sm:gap-2.5   ">
-            <button  disabled={pendingLogout} className="flex gap-2  sm:gap-3 items-center cursor-pointer text-lg mr-6 sm:text-2xl text-red-300" onClick={signout }><span className="text-sm sm:text-lg  text-gray-400">LogOut</span>{pendingLogout?<Spinning/> :<FiLogOut/>}</button>
+            <button  disabled={pendingLogout} className="flex gap-2  sm:gap-3 items-center cursor-pointer text-lg mr-3 sm:text-2xl text-red-300" onClick={signout }><span className="text-sm sm:text-lg  text-gray-400">LogOut</span>{pendingLogout?<Spinning/> :<FiLogOut/>}</button>
             <div className=" relative"><input className="hidden xl:block border rounded-4xl  border-(--main-color) w-70 px-2.5 py-3.25" type="search" placeholder="Search..." /><button className="cursor-pointer hidden xl:block absolute top-0 right-0 text-[24px] text-white bg-(--main-color) p-3.5 rounded-[50%]" ><GoSearch/> </button></div>
             <div className="flex flex-col sm:flex-row gap-0.5 sm:gap-5   text-(--main-color) text-[25px]">
                 <NavLink className='heart bg-white' to={'wishlist'}><FaRegHeart/><div className="absolute text-sm bg-(--main-color) py-0.5 px-1.5 text-white sm:top-19 top-7.5 rounded-[50%] sm:right-22 right-4"><p className="text-[11px]">{wishlist.length}</p></div></NavLink>
