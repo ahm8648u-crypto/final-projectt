@@ -62,7 +62,7 @@ if(user){
       ],
       
     },
-  ]);
+  ],{ basename: import.meta.env.BASE_URL });
   
   
   
