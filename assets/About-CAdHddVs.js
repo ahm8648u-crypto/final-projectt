@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-Cx0BB4qO.js";var t=e();function n(){return(0,t.jsx)(`div`,{children:`About`})}export{n as default};
