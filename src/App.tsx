@@ -19,7 +19,7 @@ const Placingorder=lazy(()=>import('./pages/Placingorder'))
 
 const Loadhandelar=lazy(()=>import('./re-use/Loadhandelar'))
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import AuthInitialize from "./component/AuthInitialize";
 import useWishlist from "./zustand/wishListStore";
 import useAuth from "./zustand/authData";
@@ -38,7 +38,7 @@ if(user){
     getwishlist()
 }
     },[getwishlist,user,getCart])
-   const route= createBrowserRouter([
+   const route= createHashRouter([
     {
       path: "/",
       element:<Suspense fallback={<Loadhandelar status="main" />}><Layout/></Suspense> ,
