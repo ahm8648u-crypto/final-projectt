@@ -1,0 +1,82 @@
+@import '@fontsource/sora';
+@import 'tailwindcss';
+body{
+  font-family: 'Sora';
+  
+}
+
+:root{
+  --main-color:#B18B5E;
+  --dark-color:#161616;
+  --card-color:#EBF9FC;
+  --slide-color:#F6F6F6;
+}
+.card:hover .btn-card{
+  transform: scaleY(1);
+}
+.btn-card{
+  transform: scaleY(0);
+}
+.card:hover .image-card{
+transform: scale(1.1);
+}
+.sin.active{
+  background-color: #B18B5E;
+  color: white;
+}
+.sup.active{
+  background-color: #B18B5E;
+  color:white;
+}
+.sh.active{
+  padding: 5px 12px;
+  border-radius: 20px;
+  background-color: #B18B5E;
+  color:white;
+}
+.pr.active{
+  padding: 5px 12px;
+  border-radius: 20px;
+  background-color: #B18B5E;
+  color:white;
+}
+.ab.active{
+  padding: 5px 12px;
+  border-radius: 20px;
+  background-color: #B18B5E;
+  color:white;
+}
+.ho.active{
+  padding: 5px 12px;
+  border-radius: 20px;
+  background-color: #B18B5E;
+  color:white;
+}
+.pa.active{
+  padding: 5px 12px;
+  border-radius: 20px;
+  background-color: #B18B5E;
+  color:white;
+  
+}
+.co.active{
+  padding: 5px 12px;
+  border-radius: 20px;
+  background-color: #B18B5E;
+  color:white;
+}
+.bl.active{
+  padding: 5px 12px;
+  border-radius: 20px;
+  background-color: #B18B5E;
+  color:white;
+}
+.heart.active{
+  color: #B18B5E;
+}
+.om{
+  background-color: #FAF7F2;
+}
+.im{
+  height: 40px !important;
+}
