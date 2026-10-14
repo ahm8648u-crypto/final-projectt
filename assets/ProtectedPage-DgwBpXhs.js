@@ -1,1 +1,0 @@
-import{t as e}from"./jsx-runtime-Cx0BB4qO.js";import{a as t}from"./supabase-Z2kGuG6s.js";import{P as n}from"./index-musLFiWf.js";var r=e();function i({children:e}){let i=n(e=>e.user);return!n(e=>e.loadingUser)&&!i?(0,r.jsx)(t,{to:`/`}):e}export{i as default};
