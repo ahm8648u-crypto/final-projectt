@@ -48,7 +48,6 @@ if(user){
         { path: "about", element:<Suspense fallback={<Loadhandelar status="page"/>}><About /> </Suspense> },
         { path: "shop", element: <Suspense fallback={<Loadhandelar status="page"/>}><Shop /></Suspense> },
         { path: "home/shop", element: <Suspense fallback={<Loadhandelar status="page"/>}><Shop /></Suspense> },
-
         { path: "cartpage/shop", element: <Suspense fallback={<Loadhandelar status="page"/>}><Shop /></Suspense> },
         { path: "pages", element:<Suspense fallback={<Loadhandelar status="page"/>}> <Pages /></Suspense> },
         { path: "wishlist", element:<Suspense fallback={<Loadhandelar status="page"/>}><ProtectedPage><WishList /></ProtectedPage> </Suspense> },
