@@ -111,7 +111,6 @@ getproduct()
       stars={<FaRegStar />}
       icons={[
         <FiShoppingBag onClick={() => togglecart(product.id)} />,
-        <MdOutlineRemoveRedEye />,
         <FaRegHeart onClick={() => togglewishlist(product.id)} />,
       ]}
     />

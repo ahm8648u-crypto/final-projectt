@@ -110,8 +110,8 @@ export default function Nav() {
         </div>
           {!user ?
            (<div className="w-75 ms-37.5 flex">
-            <Link className="  sm:px-3 px-2 py-2   block sm:hidden text-2xl mx-2 text-white  bg-green-700 rounded-[50%] " to={'login'}><FaSignInAlt/></Link>
-            <Link className=" sm:px-3 px-2 py-2 mx-0 text-2xl block sm:hidden mx--9 text-white bg-red-700 rounded-[50%]" to={'signup'}><FaGooglePlusG/></Link>
+            <Link className="  sm:p-3 px-1 py-1  block sm:hidden text-2xl mx-2 text-white  bg-green-700 rounded-[50%] " to={'login'}><FaSignInAlt/></Link>
+            <Link className=" sm:p-3 px-1 py-1 mx-0 text-2xl block sm:hidden mx--9 text-white bg-red-700 rounded-[50%]" to={'signup'}><FaGooglePlusG/></Link>
             
 
             <NavLink className="hidden sin sm:flex w-full px-3  py-2 border border-(--main-color) sm:justify-center bg-white text-(--main-color) hover:bg-(--main-color) hover:text-white  text-center " to={'login'}>SIGN IN</NavLink>

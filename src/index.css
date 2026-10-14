@@ -4,7 +4,9 @@ body{
   font-family: 'Sora';
   
 }
-
+body,html{
+  overflow-x: hidden;
+}
 :root{
   --main-color:#B18B5E;
   --dark-color:#161616;
