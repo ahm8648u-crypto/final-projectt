@@ -44,7 +44,7 @@ export default function WishList() {
   return (
     <>
       <Heading title="WishList" cat />
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-11 mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7 mx-auto">
         {wishlistloading ? (
           <ProductSkelton count={4} />
         ) : (

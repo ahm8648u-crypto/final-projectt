@@ -26,7 +26,7 @@ export default function ProductCard({image,title,price,discount,id}:Tproduct) {
   const  isLoading=loadingInsert==id
   return (
     <>
-    <div className='shadow-2xl border-sm w-40 h-60 sm:h-max sm:w-80 p-4 mt-15 bg-white overflow-hidden relative rounded-2xl '>
+    <div className='shadow-2xl border-sm w-40 h-60 sm:h-max sm:w-80 p-4 mt-7 bg-white overflow-hidden relative rounded-2xl '>
       {
         isLiked?<div onClick={()=>togglewishlist(id)} className="absolute inset-e-2 top-0.5 sm:top-5 sm:inset-e-7  text-red-600 z-20 text-2xl cursor-pointer"><FaHeart/></div>:
         <button onClick={()=>togglewishlist(id)} className="absolute inset-e-2 top-0.5 z-20 text-2xl cursor-pointer" >   <FaRegHeart/></button>

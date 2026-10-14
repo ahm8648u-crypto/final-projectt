@@ -253,7 +253,7 @@ export default function Home() {
 
                       transition
                     "
-                    to={"about"}
+                    to={"shop"}
                   >
                     BUY NOW
                     <FaChevronRight />
@@ -296,7 +296,7 @@ export default function Home() {
 
                       transition
                     "
-                    to={"about"}
+                    to={"shop"}
                   >
                     VIEW DETAILS
                     <FaChevronRight />
@@ -358,7 +358,7 @@ export default function Home() {
 
 
                 <img
-                  src={prod1}
+                  src={prod2}
                   alt="chair"
                   className="
                   
@@ -555,7 +555,7 @@ export default function Home() {
 
                       transition
                     "
-                    to={"about"}
+                    to={"shop"}
                   >
                     BUY NOW
                     <FaChevronRight />
@@ -588,7 +588,7 @@ export default function Home() {
                       hover:bg-(--main-color)
                       hover:text-white
                     "
-                    to={"about"}
+                    to={"shop"}
                   >
                     VIEW DETAILS
                     <FaChevronRight />
@@ -647,7 +647,7 @@ export default function Home() {
 
 
                 <img
-                  src={prod2}
+                  src={prod1}
                   
                   alt="chair"
                   className="
@@ -839,7 +839,7 @@ export default function Home() {
 
                       transition
                     "
-                    to={"about"}
+                    to={"shop"}
                   >
                     BUY NOW
                     <FaChevronRight />
@@ -872,7 +872,7 @@ export default function Home() {
                       hover:bg-(--main-color)
                       hover:text-white
                     "
-                    to={"about"}
+                    to={"shop"}
                   >
                     VIEW DETAILS
                     <FaChevronRight />

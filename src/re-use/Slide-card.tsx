@@ -33,7 +33,7 @@ export default function Slidecard({ icons, stars, image, price, title ,id}: marg
 
       <div className="border-t border-gray-100 p-4">
         <div className="flex items-center justify-between gap-2">
-          <p className="truncate font-bold">{title}</p>
+          <p className="truncate font-bold ">{title}</p>
           <p className="font-semibold text-(--main-color)">${price}</p>
         </div>
         <div className="mt-2 flex gap-1 text-sm text-amber-400">

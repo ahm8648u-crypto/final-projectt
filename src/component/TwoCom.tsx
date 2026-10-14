@@ -20,11 +20,11 @@ export default function TwoCom() {
         </div>
 
         <div className="grid    gap-7 grid-cols-1 lg:grid-cols-2 items-center">
-          <div className=" default:w-70 flex sm:flex-row flex-col px- sm:px-4 h-full bg-(--card-color)  items-center "><div className="flex flex-col gap-5" ><p className="text-(--main-color)">GET 30% OFF</p><p className="text-xl sm:text-3xl font-bold">wicker hanging <br />
-          chairs</p> <Link className="hover:opacity-70 cursor-pointer px-3 sm:px-10 w-max text-white font-bold py-2 sm:py-5 bg-(--main-color)" to={''}>Buy Now</Link></div><img className="" src={left} alt="" /> </div>
+          <div className=" py-2 flex sm:flex-row flex-col px- sm:px-4 h-full bg-(--card-color)  items-center "><div className="flex flex-col gap-5" ><p className="text-(--main-color)">GET 30% OFF</p><p className="text-xl sm:text-3xl font-bold">wicker hanging <br />
+          chairs</p> <Link className="hover:opacity-70 cursor-pointer px-3 sm:px-10 w-max text-white font-bold py-2 sm:py-5 bg-(--main-color)" to={'shop'}>Buy Now</Link></div><img className="" src={left} alt="" /> </div>
 
- <div className="flex  sm:flex-row flex-col  px-4 bg-(--card-color)  items-center "><div className="flex flex-col gap-5" ><p className="text-(--main-color)">GET 15% OFF</p><p className="text-3xl font-bold">Brasslegged <br />
-Armchair</p> <Link className="hover:opacity-70 cursor-pointer px-5 sm:px-10 w-max text-white font-bold py-2 sm:py-5 bg-(--main-color)" to={''}>Buy Now</Link></div><img src={right} alt="" /> </div>
+ <div className="flex py-2 sm:flex-row flex-col  px-4 bg-(--card-color)  items-center "><div className="flex flex-col gap-5" ><p className="text-(--main-color)">GET 15% OFF</p><p className="text-3xl font-bold">Brasslegged <br />
+Armchair</p> <Link className="hover:opacity-70 cursor-pointer px-5 sm:px-10 w-max text-white font-bold py-2 sm:py-5 bg-(--main-color)" to={'shop'}>Buy Now</Link></div><img src={right} alt="" /> </div>
         </div>
     </div>
     </>
