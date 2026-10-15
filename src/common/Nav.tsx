@@ -83,7 +83,7 @@ export default function Nav() {
         </div>
       </div>
 
-      <div className="flex items-center justify-between px-0 md:px-2.5 py-0 stiky  sm:py-5  bg-white w-full shadow-xl ">
+      <div className="flex items-center justify-between px-0 md:px-2.5 py-0 sticky  top-0 z-150  sm:py-5  bg-white w-full shadow-xl ">
         <div className="flex items-center  gap-2 md:gap-8 lg:gap-5">
             <div className="shrink-0"><img className="w-30" src={panner} alt="" /></div>
             <div className="" ><ul className=" gap-3.75 xl:flex hidden w-full">

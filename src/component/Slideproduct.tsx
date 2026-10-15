@@ -76,7 +76,7 @@ getproduct()
     pauseOnMouseEnter:true,
   }}
 
-  loop={true}
+  loop={products.length > 4}
   speed={1500}
   spaceBetween={30}
 
