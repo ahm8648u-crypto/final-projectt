@@ -110,8 +110,8 @@ export default function Nav() {
         </div>
           {!user ?
            (<div className="w-75 ms-37.5 flex gap-3">
-            <Link className="  sm:p-3 my-auto   text-(--main-color) underline block sm:hidden text-[14px]  mx-2  " to={'login'}>سجل دخول</Link>
-            <Link className=" sm:p-3  my-auto text-[14px] block sm:hidden underline mx--9 text-(--main-color) " to={'signup'}>انشاء حساب</Link>
+            <Link className="  sm:p-3 my-auto   text-(--main-color) underline block sm:hidden text-[11px]  mx-2  " to={'login'}>سجل دخول</Link>
+            <Link className=" sm:p-3  my-auto text-[11px] block sm:hidden underline  text-(--main-color) " to={'signup'}>انشاء حساب</Link>
             
 
             <NavLink className="hidden sin sm:flex w-full px-3  py-2 border border-(--main-color) sm:justify-center bg-white text-(--main-color) hover:bg-(--main-color) hover:text-white  text-center " to={'login'}>SIGN IN</NavLink>
