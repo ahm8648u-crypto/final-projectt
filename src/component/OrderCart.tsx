@@ -15,6 +15,7 @@ export default function OrderCart({image,title,price,discount,id,stock}:Tproduct
     const deletecart=useCart(s=>s.removeCart)
     const updateQuantity = useCart(s => s.updateQuantity)
 const qty = useCart(s => s.cart.find(el => el.product_id === id)?.quantity ?? 1)
+     const shortTitle = title.split(" ").slice(0, 2).join(" ");
 
    
     
@@ -28,7 +29,7 @@ const qty = useCart(s => s.cart.find(el => el.product_id === id)?.quantity ?? 1)
         <div className="flex items-center  -ml-12">
 
         <div className="ml-4">
-        <p className='text-center mt-4 font-bold'>{title}</p>
+        <p className='text-center mt-4 font-bold'>{shortTitle}</p>
         <div className='flex justify-center gap-3 text-orange-800  w-50'><p>${finalPrice}</p> </div> 
         </div>
         <div className='flex  gap-20   rounded-3xl w-23  relative items-center '>

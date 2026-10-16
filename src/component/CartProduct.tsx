@@ -13,6 +13,8 @@ export default function CardProduct({ image, title, price, discount, id, stock }
 
   const dec = () => qty > 1 && updateQuantity(id, qty - 1);
   const inc = () => qty < stock && updateQuantity(id, qty + 1);
+     const shortTitle = title.split(" ").slice(0, 2).join(" ");
+
 
   return (
     <div className="relative w-64 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
@@ -32,7 +34,7 @@ export default function CardProduct({ image, title, price, discount, id, stock }
   />      </div>
 
       <div className="p-4 text-center">
-        <p className="truncate font-bold">{title}</p>
+        <p className="truncate font-bold">{shortTitle}</p>
         <p className="font-semibold text-(--main-color)">${finalPrice}</p>
 
         <div className="mt-3 inline-flex items-center gap-3 rounded-full bg-gray-100 p-1">
