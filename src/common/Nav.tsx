@@ -16,12 +16,13 @@ import { VscClockface } from "react-icons/vsc";
 import useAuth from "../zustand/authData";
 import useProduct from "../zustand/productstore";
 import Spinning from "../re-use/spinning";
-import { FiLogOut } from "react-icons/fi";
+import { GiExitDoor } from "react-icons/gi";
 import { FaShoppingBag } from "react-icons/fa";
 import useWishlist from "../zustand/wishListStore";
 import useCart from "../zustand/CartStore";
 import { useState } from "react";
 import Onpages from "../pages/Onpages";
+import { FaShopify } from "react-icons/fa";
 
 
 
@@ -41,10 +42,10 @@ export default function Nav() {
     const clearwishlist=useWishlist(s=>s.clearwishlist)
     const cart=useCart(s=>s.cart)
 
-
+ const name=user?.user_metadata.userName
  const links=[
     {Name:<NavLink className="ho" to={'home'}>Home</NavLink> , icon:<FaHome />,href:'/'},
-    {Name:<NavLink className="ho" to={'shop'}>Shop</NavLink>,icon:<FaHome />,href:'/'
+    {Name:<NavLink className="ho" to={'shop'}>Shop</NavLink>,icon:<FaShopify />,href:'/'
      
     },
     {Name:pr , icon:<CiShop  />,href:'products', 
@@ -85,7 +86,7 @@ export default function Nav() {
 
       <div className="flex items-center justify-between px-0 md:px-2.5 py-0 sticky  top-0 z-150  sm:py-5  bg-white w-full shadow-xl ">
         <div className="flex items-center  gap-2 md:gap-8 lg:gap-5">
-            <div className="shrink-0"><img className="w-30" src={panner} alt="" /></div>
+            <div className="shrink-0"><img className="sm:w-30 w-20" src={panner} alt="" /></div>
             <div className="" ><ul className=" gap-3.75 xl:flex hidden w-full">
                 {links.map((el)=>(
                     <li
@@ -120,28 +121,30 @@ export default function Nav() {
 
            </div>)
   
-          :(<div className="">
-          <p className="sm:text-sm text-[8.5px] text-black   bg-(--main-color) px-1 sm:px-1  py-0 sm:py-2 rounded-2xl">
-           welcome : <span className="text-amber-200 ">{user.user_metadata.userName}</span>
-           </p>
-           <p className="text-3xl cursor-pointer"></p>
-           
-           </div>)}
+          :("")}
 
            {user ?
           ( <div className="flex items-center gap-0 sm:gap-2.5   ">
-            <button  disabled={pendingLogout} className="flex gap-2  sm:gap-3 items-center cursor-pointer text-lg mr-3 sm:text-2xl text-red-300" onClick={signout }><span className="text-sm sm:text-lg  text-gray-400">LogOut</span>{pendingLogout?<Spinning/> :<FiLogOut/>}</button>
-            <div className=" relative"><input className="hidden xl:block border rounded-4xl  border-(--main-color) w-70 px-2.5 py-3.25" type="search" placeholder="Search..." /><button className="cursor-pointer hidden xl:block absolute top-0 right-0 text-[24px] text-white bg-(--main-color) p-3.5 rounded-[50%]" ><GoSearch/> </button></div>
-            <div className="flex flex-col sm:flex-row gap-0.5 sm:gap-5   text-(--main-color) text-[25px]">
-                <NavLink className='heart bg-white' to={'wishlist'}><FaRegHeart/><div className="absolute text-sm bg-(--main-color) py-0.5 px-1.5 text-white sm:top-5 top-1 rounded-[50%] sm:right-22 right-4"><p className="text-[11px]">{wishlist.length}</p></div></NavLink>
-                <NavLink className=''  to={'cartpage'}><FiShoppingBag/><div className="absolute text-sm bg-(--main-color) py-0.5 px-1.5 text-white sm:top-5  top-7.5  rounded-[50%] sm:right-12 right-4"><p className="text-[11px]">{cart.length}</p></div></NavLink>
+            <button  disabled={pendingLogout} className=" sm:flex gap-1  sm:gap-3 items-center cursor-pointer text-lg mr-3 sm:text-2xl text-red-700 hidden " onClick={signout }><span className="text-sm sm:text-lg  text-gray-400">Exit</span>{pendingLogout?<Spinning/> :<GiExitDoor/>}</button>
+            <div className="flex gap-2 sm:gap-5 items-center  text-(--main-color) text-[25px]">
+              <div className="flex gap-2 mr-5.5 sm:mr-0">
+  <span className="w-6 sm:w-9 sm:h-9 h-5  rounded-full text-sm bg-(--main-color)/15 text-(--main-color) flex items-center justify-center font-bold uppercase ">
+    {user.user_metadata.userName.charAt(0)}
+  </span>
+  <div className="leading-tight">
+    <p className="text-[8px] sm:text-[11px] text-gray-400">Welcome back</p>
+    <p className="text-[10px] sm:text-sm font-semibold text-gray-800 max-w-28 truncate">{name}</p>
+  </div>
+</div>
+                <NavLink className='heart bg-white text-lg sm:text-2xl' to={'wishlist'}><FaRegHeart/><div className="absolute text-sm bg-(--main-color) sm:py-0.5 sm:px-1.5 py-0.5 px-1 text-white sm:top-2 top-0 rounded-[50%] sm:right-22 right-10"><p className="sm:text-[11px] text-[7px]">{wishlist.length}</p></div></NavLink>
+                <NavLink className='text-lg sm:text-2xl'  to={'cartpage'}><FiShoppingBag/><div className="absolute text-sm bg-(--main-color) py-0.5 px-1 sm:px-1.5 text-white sm:top-2  top-0 rounded-[50%] sm:right-12 right-4"><p className="sm:text-[11px] text-[7px]">{cart.length}</p></div></NavLink>
                 <button
         onClick={() => setMenuOpen(true)}
         aria-label="Open menu"
-        className="cursor-pointer text-2xl text-[#b38a5b]"
+        className="cursor-pointer text-sm sm:text-2xl text-[#b38a5b] "
       >
         <AiOutlineMenu />
-      </button>
+      </button >
 
       <Onpages open={menuOpen} onClose={() => setMenuOpen(false)} />
             </div>

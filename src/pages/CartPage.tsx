@@ -37,7 +37,7 @@ export default function CartPage() {
           <span className="rounded bg-(--main-color) px-3 py-1 text-white">Cart</span>{" "}
           <span className="text-(--main-color)">Now</span>
         </h1>
-        <p className="text-gray-500">{items.length} products</p>
+        <p className="text-green-700 mx-4 animate-bounce">{items.length} products</p>
       </div>
 
       <div className="grid gap-8 lg:grid-cols-[1fr_320px]">

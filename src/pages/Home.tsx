@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
+import { FcShop } from "react-icons/fc";
 
 import hero from "../images/hero.png.png";
 import prod1 from "../images/chairh.png";
@@ -30,6 +31,8 @@ export default function Home() {
     
     <div>
       {/* <button onClick={insertpro}>ddddddddddddddddddddddddddd</button> */}
+
+      <Link className="absolute z-50 right-4 text-4xl top-36 drop-shadow-gray-900 " to={'shop'}><FcShop className="animate-bounce"/></Link>
 
       <div
         className="

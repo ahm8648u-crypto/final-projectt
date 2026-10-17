@@ -62,7 +62,7 @@ getproduct()
       </div>
      
 
- <div className="w-[69%] m-20 relative">
+ <div className="w-[69%] m-2 relative">
   <div className="flex   -left-5 absolute top-30 w-full justify-between  z-30  ">
         <div className="arrow-l  p-3 bg-gray-100 hover:bg-(--main-color) rounded-full text-black cursor-pointer hover:text-white"><IoIosArrowBack/></div>
         <div className="arrow-2 -mx-10 p-3 bg-gray-100 hover:bg-(--main-color) rounded-full text-black cursor-pointer hover:text-white"><IoIosArrowForward/></div>
