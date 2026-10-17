@@ -120,7 +120,7 @@ export default function Nav() {
 
            </div>)
   
-          :(<div className="mx-15">
+          :(<div className="">
           <p className="sm:text-sm text-[8.5px] text-black   bg-(--main-color) px-1 sm:px-1  py-0 sm:py-2 rounded-2xl">
            welcome : <span className="text-amber-200 ">{user.user_metadata.userName}</span>
            </p>
