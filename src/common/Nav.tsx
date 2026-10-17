@@ -127,7 +127,7 @@ export default function Nav() {
           ( <div className="flex items-center gap-0 sm:gap-2.5   ">
             <button  disabled={pendingLogout} className=" sm:flex gap-1  sm:gap-3 items-center cursor-pointer text-lg mr-3 sm:text-2xl text-red-700 hidden " onClick={signout }><span className="text-sm sm:text-lg  text-gray-400">Exit</span>{pendingLogout?<Spinning/> :<GiExitDoor/>}</button>
             <div className="flex gap-2 sm:gap-5 items-center  text-(--main-color) text-[25px]">
-              <div className="flex gap-2 mr-10 sm:mr-0">
+              <div className="flex gap-3 mr-10 sm:mr-0">
   <span className="w-6 sm:w-9 sm:h-9 h-5  rounded-full text-sm bg-(--main-color)/15 text-(--main-color) flex items-center justify-center font-bold uppercase ">
     {user.user_metadata.userName.charAt(0)}
   </span>
@@ -136,12 +136,12 @@ export default function Nav() {
     <p className="text-[10px] sm:text-sm font-semibold text-gray-800 max-w-28 truncate">{name}</p>
   </div>
 </div>
-                <NavLink className='heart bg-white text-lg sm:text-2xl' to={'wishlist'}><FaRegHeart/><div className="absolute text-sm bg-(--main-color) sm:py-0.5 sm:px-1.5 py-0.5 px-1 text-white sm:top-2 top-0 rounded-[50%] sm:right-22 right-10"><p className="sm:text-[11px] text-[7px]">{wishlist.length}</p></div></NavLink>
-                <NavLink className='text-lg sm:text-2xl'  to={'cartpage'}><FiShoppingBag/><div className="absolute text-sm bg-(--main-color) py-0.5 px-1 sm:px-1.5 text-white sm:top-2  top-0 rounded-[50%] sm:right-12 right-4"><p className="sm:text-[11px] text-[7px]">{cart.length}</p></div></NavLink>
+                <NavLink className='heart bg-white text-lg sm:text-2xl' to={'wishlist'}><FaRegHeart/><div className="absolute text-sm bg-(--main-color) sm:py-0.5 sm:px-1.5 py-0.5 px-1 text-white sm:top-3 top-0 rounded-[50%] sm:right-22 right-12"><p className="sm:text-[11px] text-[7px]">{wishlist.length}</p></div></NavLink>
+                <NavLink className='text-lg sm:text-2xl'  to={'cartpage'}><FiShoppingBag/><div className="absolute text-sm bg-(--main-color) py-0.5 px-1 sm:px-1.5 text-white sm:top-3  top-0 rounded-[50%] sm:right-12 right-6"><p className="sm:text-[11px] text-[7px]">{cart.length}</p></div></NavLink>
                 <button
         onClick={() => setMenuOpen(true)}
         aria-label="Open menu"
-        className="cursor-pointer text-sm sm:text-2xl text-[#b38a5b] "
+        className="cursor-pointer text-lg sm:text-2xl text-[#b38a5b] "
       >
         <AiOutlineMenu />
       </button >

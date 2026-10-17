@@ -26,19 +26,7 @@ import useAuth from "./zustand/authData";
 import CartPage from "./pages/CartPage";
 import useCart from "./zustand/CartStore";
 import Onpages from "./pages/Onpages";
-export default function App() {
-   const getwishlist=useWishlist(s=>s.getWishList)  
-   const getCart=useCart(s=>s.getCart)  
-    const user=useAuth(s=>s.user)
-
-
-    useEffect(()=>{
-if(user){
-    getCart()
-    getwishlist()
-}
-    },[getwishlist,user,getCart])
-   const route= createHashRouter([
+  const route= createHashRouter([
     {
       path: "/",
       element:<Suspense fallback={<Loadhandelar status="main" />}><Layout/></Suspense> ,
@@ -57,6 +45,8 @@ if(user){
         { path: "shop/:name/:id", element:<Suspense fallback={<Loadhandelar status="page"/>}><Productpage /></Suspense>  },
         { path: "contact", element: <Suspense fallback={<Loadhandelar status="page"/>}><Contact /></Suspense> },
          { path: "login", element:<Suspense fallback={<Loadhandelar status="page"/>}> <Signin /></Suspense> },
+         { path: "login/home", element:<Suspense fallback={<Loadhandelar status="page"/>}> <Home/></Suspense> },
+
         { path: "signup", element:<Suspense fallback={<Loadhandelar status="page"/>}><Signup /></Suspense>  },
       
         // { path: "*", element: <NotFoundPage /> },
@@ -64,6 +54,19 @@ if(user){
       
     },
   ]);
+export default function App() {
+   const getwishlist=useWishlist(s=>s.getWishList)  
+   const getCart=useCart(s=>s.getCart)  
+    const user=useAuth(s=>s.user)
+
+
+    useEffect(()=>{
+if(user){
+    getCart()
+    getwishlist()
+}
+    },[getwishlist,user,getCart])
+ 
   
   
   

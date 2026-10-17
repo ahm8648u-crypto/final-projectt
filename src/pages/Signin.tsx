@@ -8,7 +8,7 @@ import useAuth from "../zustand/authData"
 import { useNavigate } from "react-router-dom"
 import {toast} from 'react-toastify'
 import { LoginSchema, type TinputLogin } from "../validation/Loginvalidation"
-
+import { Link } from "react-router-dom"
 export default function Signin() {
     const {register,handleSubmit,formState: { errors ,isValid,isDirty}}=useForm<TinputLogin>({
         resolver: zodResolver(LoginSchema),
@@ -24,12 +24,13 @@ export default function Signin() {
         handelLogin(data)
 
       const res = await  handelLogin(data);
+      console.log("login result:", res);
       if(!res.success){
      setErr(res.message as string)
 
       }else{
       setErr('')
-      navigate('home')
+      navigate('/home')
       toast.success('Success Log-in......')
       }
         
@@ -59,6 +60,7 @@ export default function Signin() {
       {err && <div className="w-full py-4 text-center border text-red-900 border-b-red-600 bg-red-300">{err}</div>}
       <BtnAuth  isLoading={loadingLogin} isDirty={isDirty} isValid={isValid}>
         Login
+        
       </BtnAuth>
 
     </form>
