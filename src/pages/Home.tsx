@@ -32,7 +32,7 @@ export default function Home() {
     <div>
       {/* <button onClick={insertpro}>ddddddddddddddddddddddddddd</button> */}
 
-      <Link className="absolute z-50 right-4 text-4xl top-36 drop-shadow-gray-900 " to={'shop'}><FcShop className="animate-bounce"/></Link>
+      <Link className="fixed z-50 right-2 sm:right-4 text-4xl top-12 sm:top-36 drop-shadow-gray-900  " to={'shop'}><FcShop className="animate-bounce"/></Link>
 
       <div
         className="

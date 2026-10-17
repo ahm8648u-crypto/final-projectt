@@ -84,7 +84,7 @@ export default function Nav() {
         </div>
       </div>
 
-      <div className="flex items-center justify-between px-0 md:px-2.5 py-0 sticky  top-0 z-150  sm:py-5  bg-white w-full shadow-xl ">
+      <div className="flex items-center justify-between px-0 md:px-2.5  sticky  top-0 z-150 py-1  sm:py-5  bg-white w-full shadow-xl ">
         <div className="flex items-center  gap-2 md:gap-8 lg:gap-5">
             <div className="shrink-0"><img className="sm:w-30 w-20" src={panner} alt="" /></div>
             <div className="" ><ul className=" gap-3.75 xl:flex hidden w-full">
@@ -127,7 +127,7 @@ export default function Nav() {
           ( <div className="flex items-center gap-0 sm:gap-2.5   ">
             <button  disabled={pendingLogout} className=" sm:flex gap-1  sm:gap-3 items-center cursor-pointer text-lg mr-3 sm:text-2xl text-red-700 hidden " onClick={signout }><span className="text-sm sm:text-lg  text-gray-400">Exit</span>{pendingLogout?<Spinning/> :<GiExitDoor/>}</button>
             <div className="flex gap-2 sm:gap-5 items-center  text-(--main-color) text-[25px]">
-              <div className="flex gap-2 mr-5.5 sm:mr-0">
+              <div className="flex gap-2 mr-9.5 sm:mr-0">
   <span className="w-6 sm:w-9 sm:h-9 h-5  rounded-full text-sm bg-(--main-color)/15 text-(--main-color) flex items-center justify-center font-bold uppercase ">
     {user.user_metadata.userName.charAt(0)}
   </span>
