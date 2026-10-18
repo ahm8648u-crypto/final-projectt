@@ -8,6 +8,7 @@ import Spinning from "../re-use/spinning";
 import { MdProductionQuantityLimits } from "react-icons/md";
 import { TbLogout } from "react-icons/tb";
 import useWishlist from "../zustand/wishListStore";
+import { GiExitDoor } from "react-icons/gi";
 
 const links = [
   { name: "Home", to: "/home", icon: <FaHome /> },
@@ -17,6 +18,8 @@ const links = [
 type Props = { open: boolean; onClose: () => void };
 
 export default function Onpages({ open, onClose }: Props) {
+    const pendingLogout=useAuth(s=>s.loadingLogout)
+
     const logoutHandel = useAuth(s => s.logoutHandel)
     const clearwishlist=useWishlist(s=>s.clearwishlist)
 
@@ -52,9 +55,11 @@ export default function Onpages({ open, onClose }: Props) {
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="mx-6 mt-8">
-          <p className="text-sm text-gray-400">welcome</p>
-          <p>{user?.user_metadata?.userName}</p>
+        <div className="mx-6 mt-8 flex items-center gap-2">
+         <div> <p className="text-sm text-gray-400">welcome</p>
+          <p>{user?.user_metadata?.userName}</p></div>
+        <button  disabled={pendingLogout} className=" mt-5 sm:hidden gap-1  sm:gap-3 items-center cursor-pointer text-2xl mr-3 sm:text-2xl text-red-700 flex " onClick={signout }><span className="text-sm sm:text-lg  text-gray-400"></span>{pendingLogout?<Spinning/> :<GiExitDoor className=""/>}</button>
+          
         </div>
 
         <ul className="mt-6 flex flex-col px-4">
