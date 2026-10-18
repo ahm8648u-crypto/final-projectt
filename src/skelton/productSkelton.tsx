@@ -9,20 +9,20 @@ export default function ProductSkelton({count=8}:{count ?:number}) {
         <div className='  w-80  mt-15   '>
             {/* <Skeleton variant="rectangular" width={'100%'} height={250} /> */}
 
-              <Skeleton variant="rectangular" animation={"wave"} width={300} height={300} />
+              <Skeleton variant="rectangular" animation={"wave"} width={150} height={200} />
 
-                <div className='ml-20 mt-4'><Skeleton animation={"wave"} variant="rectangular" width={150} height={20} />
+                <div className='ml-5 mt-4 '><Skeleton animation={"wave"} variant="rectangular" width={100} height={20} />
 </div>
-             <div className='ml-27 mt-4'><Skeleton animation={"wave"} variant="rectangular" width={100} height={20} />
+             <div className='ml-9 mt-4'><Skeleton animation={"wave"} variant="rectangular" width={70} height={20} />
 </div>
   
-                <div className='flex justify-between gap-12 mt-2 '>
+                <div className='flex  gap-14 mt-2 '>
                     <div
                     className=' p-2  '>
-                        <Skeleton animation={"wave"} variant="rectangular" width={40} height={40} />
+                        <Skeleton animation={"wave"} variant="rectangular" width={30} height={30} />
 </div>
                     <div
-                    className='p-2 ml-35'><Skeleton animation={"wave"} variant="rectangular" width={40} height={40} />
+                    className='p-2 '><Skeleton animation={"wave"} variant="rectangular" width={30} height={30} />
 </div>
         
                 </div>
